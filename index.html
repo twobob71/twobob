@@ -1,62 +1,64 @@
 <!DOCTYPE html>
-<html>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>twobob.site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
 
-body, html {
-  height: 100%;
-  margin: 0;
-}
-  
-.bgimg {
-  background-image: url("background.JPG");
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  color: white;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
-}
+        h1 {
+            text-align: center;
+        }
 
-.topleft {
-  position: absolute;
-  top: 0;
-  left: 16px;
-}
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+	
+	.bgimg {
+ 	    background-image: url("background.JPG");
+ 	    height: 100%;
+ 	    background-position: center;
+ 	    background-size: cover;
+ 	    position: relative;
+ 	    color: white;
+ 	    font-family: "Courier New", Courier, monospace;
+ 	    font-size: 25px;
+	}
 
-.bottomleft {
-  position: absolute;
-  bottom: 0;
-  left: 16px;
-}
+        .photo {
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
 
-.middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-hr {
-  margin: auto;
-  width: 40%;
-}
-</style>
+        .photo:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
 <body>
+    
+    <div class="bgimg">
 
-<div class="bgimg">
-  <div class="topleft">
-    <p>twobob.site</p>
-  </div>
-  <div class="middle">
-  <a href=https://photos.app.goo.gl/q9LArqJSYKtNceHn8>twobob photos :-)</a>
-  </div>
-  <div class="bottomleft">
-    <p>I need some inspiration!</p>
-  </div>
-</div>
+    <h1>Welcome to My Photography Showcase</h1>
+
+    <div class="photo-gallery">
+        <img src="photo1.jpg" alt="Photo 1" class="photo">
+        <img src="photo2.jpg" alt="Photo 2" class="photo">
+        <img src="photo3.jpg" alt="Photo 3" class="photo">
+        <!-- Add more images as needed -->
+    </div>
+
+    <p>Explore more twobob photos in my shared <a href=https://photos.app.goo.gl/q9LArqJSYKtNceHn8">Google Photos album</a>.</p>
+
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b38077b1b4494de58b835d567545b5b4"}'></script><!-- End Cloudflare Web Analytics -->
+
 </body>
 </html>
