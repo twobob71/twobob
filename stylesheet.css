@@ -49,7 +49,7 @@ body{
 	z-index: -1;
 	min-height: 100%; 
 
-	transform: translate3d(0,0,-1px) scale(1);
+	transform: translate3d(0,0,-1px) scale(2);
 }
 h2{
 	color: #fff;
