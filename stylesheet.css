@@ -39,7 +39,7 @@ body{
 	transform-style: preserve-3d;
 }
 .parallax_bg{
-	position: absolute;
+	position: sticky;
 	left: 0;
 	top: 0;
 	right: 0;
@@ -49,7 +49,7 @@ body{
 	z-index: -1;
 	min-height: 100%; 
 
-	transform: translate3d(0,0,-1px) scale(2);
+	transform: translate3d(0,0,-1px) scale(1);
 }
 h2{
 	color: #fff;
