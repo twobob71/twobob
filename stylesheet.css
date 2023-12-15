@@ -40,8 +40,8 @@ body{
 }
 .parallax_bg{
 	position: sticky;
-	left: 20px;
-	top: 20px;
+	left: 0;
+	top: 100px;
 	right: 0;
 	bottom: 0;
 	background-size: cover;
