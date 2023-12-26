@@ -47,7 +47,7 @@ body{
 	background-size: cover;
 	background-position: center center;
 	z-index: -1;
-	min-height: 80%; 
+	min-height: 100%; 
 
 	transform: translate3d(0,0,-1px) scale(2);
 }
