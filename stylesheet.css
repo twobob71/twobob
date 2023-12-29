@@ -27,11 +27,11 @@ body{
 	min-height: 100vh;
 	padding: 10vh 10vh;
 	position: relative;
-	width:100vw;
+	width:60vw;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	z-index: 1;
+	z-index: -1;
 
 	overflow: hidden;
 
@@ -45,7 +45,7 @@ body{
 	bottom: 0;
 	background-size: cover;
 	background-position: center center;
-	z-index: -1;
+	z-index: 1;
 	min-height: 100%; 
 	transform: translate3d(0,0,-1px) scale(2);
 }
