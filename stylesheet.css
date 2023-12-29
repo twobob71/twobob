@@ -17,7 +17,7 @@ body{
 	overflow: hidden;
 }
 .wrapper{
-	height: 50%;
+	height: 100%;
 	overflow-x: hidden;
 	perspective: 1px;
 }
