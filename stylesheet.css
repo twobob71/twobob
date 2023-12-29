@@ -25,15 +25,13 @@ body{
 .parallax_section{
 	box-sizing: border-box;
 	min-height: 100vh;
-	padding: 10vh 10vh;
+	padding: 0vh 0vh;
 	position: relative;
 	width:100vw;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	z-index: -1;
-
-	overflow: hidden;
 	overflow-x: visible;
 
 	transform-style: preserve-3d;
