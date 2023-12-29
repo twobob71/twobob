@@ -54,11 +54,20 @@ body{
 h2{
 	color: #fff;
 	margin: 0 0 5px;
-	font-size: 16px;
+	font-size: 24px;
 	text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
 	text-align: center;
 	text-transform: lowercase;
 }
+h3{
+	color: #fff;
+	margin: 0 0 5px;
+	font-size: 12px;
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+	text-align: center;
+	text-transform: lowercase;
+}
+
 
 
 
