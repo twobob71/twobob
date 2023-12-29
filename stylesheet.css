@@ -27,13 +27,14 @@ body{
 	min-height: 100vh;
 	padding: 10vh 10vh;
 	position: relative;
-	width:60vw;
+	width:100vw;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	z-index: -1;
 
 	overflow: hidden;
+	overflow-x: visible;
 
 	transform-style: preserve-3d;
 }
