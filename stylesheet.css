@@ -4,50 +4,49 @@
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
 }
-body{
-	font-family: arial;
-	font-size: 36px;
-	margin: 24px;
-	background: #fff;
-	color: #fff;
+
+.wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
 }
 
-.wrapper_outer{
-	height: 100vh;
-	overflow: hidden;
-}
-.wrapper{
-	height: 100%;
-	overflow-x: hidden;
-	perspective: 1px;
+.section { 
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 0 5px #000;
 }
 
-.parallax_section{
-	box-sizing: border-box;
-	min-height: 50vh;
-	padding: 0vh 0vh;
-	position: relative;
-	width:100vw;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	z-index: -1;
-	overflow-x: visible;
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(1.5);
+  background-size: 100%;
+  z-index: -1;
+}
 
-	transform-style: preserve-3d;
+.static {
+  background: red;
 }
-.parallax_bg{
-	position: sticky;
-	left: 0;
-	top: 20px;
-	right: 0;
-	bottom: 0;
-	background-size: cover;
-	background-position: top center;
-	z-index: 1;
-	min-height: 30%; 
-	transform: translate3d(0,0,-1px) scale(2);
+
 }
+.bg1::after {
+  background-image: url('twobob.png');
+}
+
+.bg2::after {
+  background-image: url('twobob.png');
+}
+
 h2{
 	color: #fff;
 	margin: 20px;
