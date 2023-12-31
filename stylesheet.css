@@ -57,7 +57,13 @@
 .bg2::after {
   background-image: url("https://placekitten.com/g/900/700");
 }
-
+h1{
+	color: #fff;
+	margin: 20px;
+	font-size: 12px;
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+	text-align: center;
+}
 
 
 
