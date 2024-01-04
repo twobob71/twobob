@@ -18,7 +18,7 @@
 
   /* For text formatting. */
   display: flex;
-  font-size: 24px;	
+  font-size: 22px;	
   align-items: center;
   justify-content: center;
   color: white;
@@ -32,7 +32,7 @@
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
+  left: 10%;
 
   /* Move the pseudo-element back away from the camera,
    * then scale it back up to fill the viewport.
@@ -46,7 +46,7 @@
 
 /* The styling for the static div. */
 .static {
-  height: 20vh;
+  height: 12vh;
   background: red;
 }
 
