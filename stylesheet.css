@@ -52,11 +52,11 @@
 
 /* Sets the actual background images to adorable kitties. This part is crucial. */
 .bg1::after {
-  background-image: url("background1.jpg");
+  background-image: url("background1 (Phone).jpg");
 }
 
 .bg2::after {
-  background-image: url("background2.jpg");
+  background-image: url("background2 (Phone).jpg");
 }
 
 
