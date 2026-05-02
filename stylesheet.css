@@ -76,7 +76,7 @@ h1 {
 
 /* Background Assignments */
 .bg1 { background-image: url("_DSC6120.JPG"); }
-.bg2 { background-image: url("_DSC6120.JPG"); }
+.bg2 { background-image: url("bg-mobile.jpg"); }
 
 /* --- MOBILE & TABLET OPTIMIZATIONS --- */
 @media (max-width: 768px) {
