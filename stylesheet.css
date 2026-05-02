@@ -20,16 +20,16 @@ body {
 }
 
 .corner-logo {
-    width: 80px;     /* Adjust size as needed */
+    width: 65px;      /* Reduced size */
     height: auto;
     display: block;
     
-    /* Optional: Subtle glow to help it pop against dark images */
-    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.5));
+    /* This makes the black background slightly less jarring */
+    border-radius: 8px; 
     
-    /* Optional: Makes it slightly interactive */
     transition: transform 0.3s ease;
 }
+
 
 .corner-logo:hover {
     transform: scale(1.1); /* Slight grow effect when hovered */
