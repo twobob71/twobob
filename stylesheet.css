@@ -87,7 +87,7 @@ h1 {
 
     .image-section {
         height: 70vh; /* Slightly shorter sections on mobile */
-        background-attachment: scroll; /* Disables fixed background for better mobile performance */
+        background-attachment: fixed; /* Disables fixed background for better mobile performance */
     }
 
     .static-section {
