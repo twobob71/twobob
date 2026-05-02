@@ -55,23 +55,37 @@ h1 {
     text-shadow: 2px 2px 15px rgba(0,0,0,0.9);
 }
 
-/* --- Glassmorphic Static Bar --- */
 .static-section {
-    position: -webkit-sticky; /* Safari support */
-    position: sticky;
-    top: 25vh;        /* Keeps it floating in the middle-ish of the screen */
-    margin-top: -25vh; /* Pulls the bar UP so it overlaps the image above it */
-    z-index: 10;
+    position: relative; /* Context for the glass layer */
+    min-height: 25vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent; /* Section itself is clear */
+    overflow: hidden;         /* Keeps the blur within the bar bounds */
+}
+
+/* This is the actual glass layer */
+.static-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
     
-    background: rgba(255, 255, 255, 0.05); 
-    backdrop-filter: blur(15px) saturate(180%);
-    -webkit-backdrop-filter: blur(15px) saturate(180%);
+    /* Move background and blur here */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
     
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    
-    min-height: 25vh;
+    z-index: -1; /* Pushes the glass BEHIND your text/content */
+}
+
+/* Ensure content stays above the glass layer */
+.static-section .content {
+    position: relative;
+    z-index: 2;
 }
 
 /* Link Styling */
