@@ -56,37 +56,36 @@ h1 {
 }
 
 .static-section {
-    position: relative; /* Context for the glass layer */
-    min-height: 25vh;
+    position: relative;
     width: 100%;
+    min-height: 25vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: transparent; /* Section itself is clear */
-    overflow: hidden;         /* Keeps the blur within the bar bounds */
-}
+    text-align: center;
+    padding: 40px 20px;
 
-/* This is the actual glass layer */
-.static-section::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    
-    /* Move background and blur here */
-    background: rgba(255, 255, 255, 0.05);
+    /* 1. The Glass Effect (Applied directly to the section) */
+    background: rgba(255, 255, 255, 0.05) !important;
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     
+    /* 2. Critical Android Fix: Prevent Chrome from flattening the layer */
+    transform: translateZ(0); 
+    
+    /* 3. Borders & Shadows */
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    z-index: -1; /* Pushes the glass BEHIND your text/content */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    
+    z-index: 10;
 }
 
-/* Ensure content stays above the glass layer */
-.static-section .content {
-    position: relative;
-    z-index: 2;
+/* Remove the ::before layer entirely to avoid Android confusion */
+.static-section::before {
+    display: none !important;
 }
+
 
 /* Link Styling */
 .contact a {
