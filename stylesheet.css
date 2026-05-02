@@ -10,6 +10,7 @@ body {
     background-color: #111;
     color: white;
     line-height: 1.6;
+    overflow-x: hidden; /* Prevents unwanted side-scrolling */
 }
 
 /* Common Section Styles */
@@ -22,11 +23,11 @@ body {
     padding: 40px 20px;
 }
 
-/* Image Sections (Desktop Parallax-style) */
+/* Image Sections (Desktop Parallax) */
 .image-section {
     position: relative;
     height: 100vh;
-    background-attachment: fixed; /* Fixed background effect */
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -54,40 +55,19 @@ h1 {
     text-shadow: 2px 2px 15px rgba(0,0,0,0.9);
 }
 
-/* --- Static Bar Enhancement --- */
+/* --- Glassmorphic Static Bar --- */
 .static-section {
-    /* Slightly lighter transparency for better "glass" feel */
-    background: rgba(255, 255, 255, 0.05); 
+    background: rgba(255, 255, 255, 0.03); /* Very slight tint */
     backdrop-filter: blur(15px) saturate(180%);
     -webkit-backdrop-filter: blur(15px) saturate(180%);
-    
-    /* Thin white border acts as the "edge" of the glass */
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    
-    /* Depth shadow */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-    
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     min-height: 25vh;
-    z-index: 10; /* Ensures it stays above the image layers */
+    z-index: 10;
 }
 
-/* --- Mobile Fix for Parallax --- */
-@media (max-width: 768px) {
-    .image-section {
-        height: 70vh;
-        /* CRITICAL: Fixed background is buggy on mobile */
-        background-attachment: scroll; 
-        background-size: cover;
-    }
-    
-    h1 {
-        font-size: 2rem; /* Adjusted for better hierarchy */
-        padding: 0 10px;
-    }
-}
-
-
+/* Link Styling */
 .contact a {
     color: #3498db;
     text-decoration: none;
@@ -106,7 +86,23 @@ h1 {
 .bg1 { background-image: url("bg-mobile.jpg"); }
 .bg2 { background-image: url("bg-mobile.jpg"); }
 
+/* --- Mobile & Tablet Optimizations --- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .image-section {
+        height: 70vh;
+        background-attachment: scroll; /* Vital for mobile performance */
+    }
+
+    .static-section {
+        padding: 50px 15px;
+    }
+
     .contact a {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 }
