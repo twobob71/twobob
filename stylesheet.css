@@ -119,8 +119,8 @@ h1 {
     }
 
     .image-section {
-        height: 70vh;
-        background-attachment: static; /* Vital for mobile performance */
+        height: 80vh;
+        background-attachment: static; /* Vital for mobile performance but I changed to static as it looks better, havent tested on iphone though*/
     }
 
     .static-section {
