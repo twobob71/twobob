@@ -156,17 +156,33 @@ h1 {
 
 /* --- Mobile & Tablet Optimizations --- */
 @media (max-width: 768px) {
+    h1 {
+        /* Reduced size so long quotes don't overflow */
+        font-size: 1.6rem; 
+        margin-bottom: 0.8rem;
+        padding: 0 10px; /* Prevents text from touching screen edges */
+    }
+
     .image-section {
         height: 80vh;
-        background-attachment: local; /* Often smoother on mobile than 'scroll' */
+        background-attachment: scroll; 
     }
-}
 
     .static-section {
-        padding: 33px 15px;
+        /* Tighter padding to save space on small screens */
+        padding: 25px 15px; 
+    }
+
+    .logo-container {
+        top: 15px;
+        right: 15px;
+    }
+
+    .corner-logo {
+        width: 45px;
     }
 
     .contact a {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 }
