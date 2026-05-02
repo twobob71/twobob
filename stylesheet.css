@@ -56,8 +56,20 @@ h1 {
 
 /* Static Bar Styles */
 .static-section {
-    background: #1a1a1a;
-    min-height: 25vh;
+  /* Semi-transparent background */
+  background: rgba(26, 26, 26, 0.6); 
+  
+  /* The "Glass" effect - blurs whatever is behind the bar */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  
+  /* Subtle border to define the edges */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  
+  /* Optional: subtle inner glow/shadow */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  
+  min-height: 25vh;
 }
 
 .contact a {
