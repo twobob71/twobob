@@ -54,15 +54,39 @@ h1 {
     text-shadow: 2px 2px 15px rgba(0,0,0,0.9);
 }
 
-/* Static Bar Styles */
+/* --- Static Bar Enhancement --- */
 .static-section {
-  background: rgba(26, 26, 26, 0.6); 
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* Safari support */
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  min-height: 25vh;
+    /* Slightly lighter transparency for better "glass" feel */
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(15px) saturate(180%);
+    -webkit-backdrop-filter: blur(15px) saturate(180%);
+    
+    /* Thin white border acts as the "edge" of the glass */
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    
+    /* Depth shadow */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    
+    min-height: 25vh;
+    z-index: 10; /* Ensures it stays above the image layers */
 }
+
+/* --- Mobile Fix for Parallax --- */
+@media (max-width: 768px) {
+    .image-section {
+        height: 70vh;
+        /* CRITICAL: Fixed background is buggy on mobile */
+        background-attachment: scroll; 
+        background-size: cover;
+    }
+    
+    h1 {
+        font-size: 2rem; /* Adjusted for better hierarchy */
+        padding: 0 10px;
+    }
+}
+
 
 .contact a {
     color: #3498db;
@@ -81,22 +105,6 @@ h1 {
 /* Background Assignments */
 .bg1 { background-image: url("bg-mobile.jpg"); }
 .bg2 { background-image: url("bg-mobile.jpg"); }
-
-/* --- MOBILE & TABLET OPTIMIZATIONS --- */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 1.6rem; /* Smaller text for smaller screens */
-        margin-bottom: 1rem;
-    }
-
-    .image-section {
-        height: 70vh; /* Slightly shorter sections on mobile */
-        background-attachment: fixed; /* Disables fixed background for better mobile performance */
-    }
-
-    .static-section {
-        padding: 50px 15px;
-    }
 
     .contact a {
         font-size: 1.2rem;
