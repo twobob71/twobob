@@ -156,15 +156,11 @@ h1 {
 
 /* --- Mobile & Tablet Optimizations --- */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
-
     .image-section {
         height: 80vh;
-        background-attachment: static; /* Vital for mobile performance but I changed to static as it looks better, havent tested on iphone though*/
+        background-attachment: local; /* Often smoother on mobile than 'scroll' */
     }
+}
 
     .static-section {
         padding: 33px 15px;
