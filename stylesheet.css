@@ -120,11 +120,11 @@ h1 {
 
     .image-section {
         height: 70vh;
-        background-attachment: scroll; /* Vital for mobile performance */
+        background-attachment: static; /* Vital for mobile performance */
     }
 
     .static-section {
-        padding: 50px 15px;
+        padding: 33px 15px;
     }
 
     .contact a {
