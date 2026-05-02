@@ -13,27 +13,30 @@ body {
     overflow-x: hidden; /* Prevents unwanted side-scrolling */
 }
 .logo-container {
-    position: fixed; /* Keeps it in the corner during scroll */
-    top: 20px;       /* Distance from the top */
-    right: 20px;     /* Distance from the right */
-    z-index: 100;    /* Ensures it stays on top of everything */
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 1000;
 }
 
 .corner-logo {
-    width: 50px;      /* Reduced size */
+    /* Adjusting to your '20% smaller' preference */
+    width: 50px; 
     height: auto;
     display: block;
-    
-    /* This makes the black background slightly less jarring */
-    border-radius: 8px; 
-    
-    transition: transform 0.3s ease;
-}
 
+    /* Soft shadow to make the white box 'pop' off the dark background */
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.4));
+
+    /* Smooth interaction when you hover over it */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .corner-logo:hover {
-    transform: scale(1.1); /* Slight grow effect when hovered */
+    transform: scale(1.08) translateY(-2px);
+    filter: drop-shadow(0 12px 25px rgba(0, 0, 0, 0.5));
 }
+
 
 /* --- Mobile Adjustment --- */
 @media (max-width: 768px) {
