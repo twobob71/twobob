@@ -20,17 +20,20 @@ body {
 }
 
 .corner-logo {
-    /* Adjusting to your '20% smaller' preference */
-    width: 50px; 
+    width: 50px;
     height: auto;
-    display: block;
+    
+    /* 1. This forces the corners to be rounded */
+    border-radius: 12px; 
+    
+    /* 2. This ensures the image stays inside those rounded corners */
+    overflow: hidden; 
 
-    /* Soft shadow to make the white box 'pop' off the dark background */
+    /* Keep your existing styles below */
     filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.4));
-
-    /* Smooth interaction when you hover over it */
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 .corner-logo:hover {
     transform: scale(1.08) translateY(-2px);
