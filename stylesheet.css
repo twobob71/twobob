@@ -165,7 +165,7 @@ h1 {
 
     .image-section {
         height: 80vh;
-        background-attachment: scroll; 
+        background-attachment: local; 
     }
 
     .static-section {
