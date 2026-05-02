@@ -56,36 +56,41 @@ h1 {
 }
 
 .static-section {
-    position: relative;
-    width: 100%;
-    min-height: 25vh;
+    /* 1. Resetting the layout */
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    width: 100%;
+    min-height: 25vh;
     padding: 40px 20px;
+    position: relative;
+    
+    /* 2. The Overlap (Crucial) */
+    /* This pulls the bar slightly over the image above it so there is something to blur */
+    margin-top: -50px; 
+    margin-bottom: -50px;
+    z-index: 10;
 
-    /* 1. The Glass Effect (Applied directly to the section) */
-    background: rgba(255, 255, 255, 0.05) !important;
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-    
-    /* 2. Critical Android Fix: Prevent Chrome from flattening the layer */
-    transform: translateZ(0); 
-    
-    /* 3. Borders & Shadows */
+    /* 3. The Glass Effect */
+    background: rgba(255, 255, 255, 0.07) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(150%) !important;
+    backdrop-filter: blur(20px) saturate(150%) !important;
+
+    /* 4. Fix for Chrome & Android Hardware Acceleration */
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+
+    /* 5. Styling */
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    
-    z-index: 10;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
 
-/* Remove the ::before layer entirely to avoid Android confusion */
-.static-section::before {
-    display: none !important;
+/* Ensure the images don't have 'isolation: isolate' */
+.image-section {
+    isolation: auto;
 }
-
 
 /* Link Styling */
 .contact a {
